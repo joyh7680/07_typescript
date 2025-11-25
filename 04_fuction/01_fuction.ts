@@ -19,17 +19,21 @@ export {};
        }
 */
 
+//함수 선언식
 function sum(a: number, b: number): number {
+  //매개변수 타입은 number.반환 타입도 number.
   return a + b;
 }
 let result1: number = sum(1, 2);
-console.log(result1);
+console.log(result1); //3 출력
 
-
-const substract = function(a: number, b: number): number {
+//함수 표현식
+//substract라는 상수 변수에 익명 함수(이름 없는 함수)를 저장.
+const substract = function (a: number, b: number): number {
   return a - b;
-}
-console.log(substract(10, 5));
+};
+console.log(substract(10, 5)); //5 출력
 
-const divide = (a: number, b: number): number => a/b;
-console.log(divide(1, 2));
+//화살표 함수
+const divide = (a: number, b: number): number => a / b; //a / b 결과를 바로 반환
+console.log(divide(1, 2)); //0.5 출력
