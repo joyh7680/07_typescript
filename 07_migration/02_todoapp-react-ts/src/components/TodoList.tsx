@@ -1,0 +1,19 @@
+import type { Todo } from "../types";
+import TodoItem from "./Todoitem";
+
+interface TodoListProps {
+  todos: Todo[];
+  toggleComplete: (id: number) => void;
+}
+
+function TodoList({ todos, toggleComplete }: TodoListProps) {
+  return (
+    <ul>
+      {todos.map((todo) => (
+        <TodoItem key={todo.id} todo={todo} toggleComplete={toggleComplete} />
+      ))}
+    </ul>
+  );
+}
+
+export default TodoList;
